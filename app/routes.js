@@ -9,13 +9,13 @@ router.post('/conflicty', function (req, res) {
   var varconflict = req.session.data['interestsyesno']
 
   // Check whether the user has selected Y to having a conflict
-  if (varconflict == "Yes") {
+  if (varconflict === 'Yes') {
     // Send user to next page to record conflict details
     res.redirect('/conflicty')
   } else {
     // Send user to check answers page
     res.redirect('/check-your-answers')
-    }
-  })
+  }
+})
  
 module.exports = router
